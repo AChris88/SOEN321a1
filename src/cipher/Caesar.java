@@ -9,21 +9,26 @@ public class Caesar {
 
 	private static String cipher = "KNXMN SLKWJ XMBFY JWGJS IXFSI FIRNY XBTWI KNXMW FSPTA JWBMJ QRNSL FSDIF D";
 	private static char[] mostUsed = { 'E', 'T', 'A', 'O', 'I', 'N' };
-	
+	private static String plainText = "";
 	private static HashMap<Character, Integer> frequencies = new HashMap<Character, Integer>();
 	private static ArrayList<Integer> potentialOffsets = new ArrayList<Integer>();
 
 	public static void main(String[] args) {
 		getCharCount();
 		setPotentialOffsets();
-		printPotentialPlaintexts();
+//		printPotentialPlaintexts();
+		
+		//after observing the output of printPotentialPlaintexts,
+		//the following plaintext message was observed using offsets
+		//of -8 and 18
+		plainText = "FISHING FRESHWATER BENDS AND ADMIT SWORDFISH RANK OVERWHELMING ANYDAY";
+		
+		printHiddenMessage();
 	}
 
 	/**
 	 * 
-	 * @param cipher
-	 *            is a cipher from which to count the occurrence of each
-	 *            character.
+	 * 
 	 */
 	private static void getCharCount() {
 		char c;
@@ -45,11 +50,7 @@ public class Caesar {
 
 	/**
 	 * 
-	 * @param frequencies
-	 *            containing the cypher's character frequencies.
-	 * @param mostUsed
-	 *            contains the characters which are most frequently used in a
-	 *            descending order.
+	 * 
 	 */
 	private static void setPotentialOffsets() {
 		int highestCount = 0;
@@ -78,7 +79,17 @@ public class Caesar {
 		}
 	}
 
+	private static void printHiddenMessage(){
+		String[] words = plainText.split(" ");
+		
+		for(String word : words){
+			if(word.length() >= 3)
+				System.out.print(word.charAt(2));
+		}
+	}
+	
 	/**
+	 * 
 	 * Prints out the values which represent the frequencies of each character
 	 * found in the cipher.
 	 */
@@ -98,17 +109,23 @@ public class Caesar {
 		}
 	}
 
+	/**
+	 * 
+	 */
 	private static void printPotentialOffsets() {
 		for (int offset : potentialOffsets) {
 			System.out.println(offset);
 		}
 	}
 	
+	/**
+	 * 
+	 */
 	private static void printPotentialPlaintexts(){
 		for(int offset : potentialOffsets){
 			for(int i = 0; i < cipher.length(); i++){
 				if(cipher.charAt(i) != ' ')
-					System.out.print((char) (cipher.charAt(i) - offset));
+					System.out.print((char) (((cipher.charAt(i) - offset) % 26) + 65));
 				else
 					System.out.print(' ');
 			}
