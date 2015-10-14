@@ -7,8 +7,11 @@ import java.util.Map.Entry;
 
 public class Caesar {
 
+	// Pre-defined assignment values
 	private static String cipher = "KNXMN SLKWJ XMBFY JWGJS IXFSI FIRNY XBTWI KNXMW FSPTA JWBMJ QRNSL FSDIF D";
 	private static char[] mostUsed = { 'E', 'T', 'A', 'O', 'I', 'N' };
+
+	// Variables used for data storage and manipulation
 	private static String plainText = "";
 	private static HashMap<Character, Integer> frequencies = new HashMap<Character, Integer>();
 	private static ArrayList<Integer> potentialOffsets = new ArrayList<Integer>();
@@ -16,13 +19,12 @@ public class Caesar {
 	public static void main(String[] args) {
 		getCharCount();
 		setPotentialOffsets();
-//		printPotentialPlaintexts();
-		
-		//after observing the output of printPotentialPlaintexts,
-		//the following plaintext message was observed using offsets
-		//of -8 and 18
+
+		// after observing the output of printPotentialPlaintexts,
+		// the following plaintext message was obtained using the offsets
+		// of -8 and 18
 		plainText = "FISHING FRESHWATER BENDS AND ADMIT SWORDFISH RANK OVERWHELMING ANYDAY";
-		
+
 		printHiddenMessage();
 	}
 
@@ -49,13 +51,13 @@ public class Caesar {
 	}
 
 	/**
-	 * 
-	 * 
+	 *  
 	 */
 	private static void setPotentialOffsets() {
 		int highestCount = 0;
 
-		Iterator<Entry<Character, Integer>> it = frequencies.entrySet().iterator();
+		Iterator<Entry<Character, Integer>> it = frequencies.entrySet()
+				.iterator();
 		Entry<Character, Integer> val;
 
 		while (it.hasNext()) {
@@ -66,7 +68,7 @@ public class Caesar {
 
 		it = frequencies.entrySet().iterator();
 		char temp;
-		
+
 		while (it.hasNext()) {
 			val = it.next();
 			if (val.getValue() == highestCount) {
@@ -79,17 +81,25 @@ public class Caesar {
 		}
 	}
 
-	private static void printHiddenMessage(){
+	/**
+	 * Prints out the hidden message in the decrypted cipher.
+	 */
+	private static void printHiddenMessage() {
+		// converts the decrypted message into an array of individual words
 		String[] words = plainText.split(" ");
-		
-		for(String word : words){
-			if(word.length() >= 3)
+
+		// iterates through every word and if it is at least 3 characters,
+		// prints out the third character.
+		for (String word : words) {
+			if (word.length() >= 3)
 				System.out.print(word.charAt(2));
 		}
 	}
-	
+
+	// Helper methods used to see obtained values for character frequencies,
+	// potential offsets, and potential plaintext values.
+
 	/**
-	 * 
 	 * Prints out the values which represent the frequencies of each character
 	 * found in the cipher.
 	 */
@@ -110,22 +120,28 @@ public class Caesar {
 	}
 
 	/**
-	 * 
+	 * Prints out the potential offsets of the Caesar cipher.
 	 */
 	private static void printPotentialOffsets() {
 		for (int offset : potentialOffsets) {
 			System.out.println(offset);
 		}
 	}
-	
+
 	/**
-	 * 
+	 * Prints out the potential plaintext values after decrypting the Caesar
+	 * cipher.
 	 */
-	private static void printPotentialPlaintexts(){
-		for(int offset : potentialOffsets){
-			for(int i = 0; i < cipher.length(); i++){
-				if(cipher.charAt(i) != ' ')
-					System.out.print((char) (((cipher.charAt(i) - offset) % 26) + 65));
+	private static void printPotentialPlaintexts() {
+		// iterate through the potential offsets
+		for (int offset : potentialOffsets) {
+			// iterate through every character in the cipher
+			for (int i = 0; i < cipher.length(); i++) {
+				// unless the character is a space, print out the character
+				// after having applied the current offset
+				if (cipher.charAt(i) != ' ')
+					System.out
+							.print((char) (((cipher.charAt(i) - offset) % 26) + 65));
 				else
 					System.out.print(' ');
 			}
