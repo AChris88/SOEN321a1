@@ -8,6 +8,7 @@ public class WebSecStats {
 
 	public static void main(String[] args) {
 		getStartIndex(27026188);
+		getStartIndex(27077076);
 	}
 
 	private static int getStartIndex(int studentId) {
