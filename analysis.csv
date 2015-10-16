@@ -1,0 +1,63 @@
+
+1,google.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+2,facebook.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+3,youtube.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+4,baidu.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+5,yahoo.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+6,amazon.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+7,wikipedia.org,true,TLSv1.2,ECDHE,128,SHA256,true,true
+8,qq.com,true,TLSv1.1,ECDHE,,SHA,true,true
+9,twitter.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+10,google.co.in,true,TLSv1.2,ECDHE,128,SHA256,true,true
+11,taobao.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+12,live.com,false,,,,,false,false
+1,google.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+2,facebook.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+3,youtube.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+4,baidu.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+5,yahoo.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+6,amazon.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+7,wikipedia.org,true,TLSv1.2,ECDHE,128,SHA256,true,true
+8,qq.com,true,TLSv1.1,ECDHE,,SHA,true,true
+9,twitter.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+10,google.co.in,true,TLSv1.2,ECDHE,128,SHA256,true,true
+11,taobao.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+12,live.com,false,,,,,false,false
+13,sina.com.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+14,linkedin.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+15,yahoo.co.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+16,weibo.com,false,,,,,false,false
+17,ebay.com,true,TLSv1.2,RSA,128,SHA256,true,true
+18,google.co.jp,true,TLSv1.2,ECDHE,128,SHA256,true,true
+19,yandex.ru,true,TLSv1.2,ECDHE,128,SHA256,true,true
+20,hao123.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+21,vk.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+22,bing.com,true,TLSv1.2,ECDHE,,SHA256,true,true
+23,google.de,true,TLSv1.2,ECDHE,128,SHA256,true,true
+24,t.co,true,TLSv1.2,ECDHE,128,SHA256,true,true
+25,instagram.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+26,msn.com,true,TLSv1.2,ECDHE,,SHA256,true,true
+27,amazon.co.jp,true,TLSv1.2,ECDHE,128,SHA256,true,true
+28,google.co.uk,true,TLSv1.2,ECDHE,128,SHA256,true,true
+29,aliexpress.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+30,pinterest.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+31,ask.com,false,,,,,false,false
+32,blogspot.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+33,apple.com,true,TLSv1.2,RSA,,SHA,true,true
+34,tmall.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+35,wordpress.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+36,reddit.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+37,google.fr,true,TLSv1.2,ECDHE,128,SHA256,true,true
+38,paypal.com,true,TLSv1.2,ECDHE,,SHA,true,true
+39,onclickads.net,true,TLSv1.2,ECDHE,,SHA,true,true
+40,google.com.br,true,TLSv1.2,ECDHE,128,SHA256,true,true
+41,mail.ru,true,TLSv1.2,ECDHE,128,SHA256,true,true
+42,tumblr.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+43,sohu.com,true,TLSv1,RSA,,SHA,true,true
+44,microsoft.com,true,TLSv1.2,RSA,,SHA256,true,true
+45,imgur.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+46,google.ru,true,TLSv1.2,ECDHE,128,SHA256,true,true
+47,xvideos.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+48,imdb.com,false,,,,,false,false
+49,google.it,true,TLSv1.2,ECDHE,128,SHA256,true,true
+50,google.es,true,TLSv1.2,ECDHE,128,SHA256,true,true
