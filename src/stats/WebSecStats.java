@@ -3,24 +3,14 @@ package stats;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.math.BigInteger;
-import java.net.ConnectException;
 import java.net.Socket;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.Certificate;
-import java.util.ArrayList;
-import java.util.List;
-import java.security.cert.X509Certificate;
-
-import javax.net.ssl.SSLServerSocket;
-import javax.net.ssl.SSLServerSocketFactory;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
@@ -36,7 +26,7 @@ public class WebSecStats {
 
 	private static void analyzeSite(int rank, String domain) {
 		// System.setProperty("javax.net.ssl.trustStore", "clienttrust");
-		// System.setProperty("https.protocols", "SSLv3,TLSv1,TLSv1.1,TLSv1.2");
+		System.setProperty("https.protocols", "SSLv3,TLSv1,TLSv1.1,TLSv1.2");
 
 		SSLSocketFactory factory = null;
 		Socket socket = null;
@@ -71,7 +61,7 @@ public class WebSecStats {
 //			System.out.println("Cipher is " + session.getCipherSuite());
 //			System.out.println("Protocol is " + session.getProtocol());
 //			System.out.println("Session: " + session);
-//			
+			
 			host = session.getPeerHost();
 			protocol = session.getProtocol();
 			cipherSuite = session.getCipherSuite();
@@ -92,6 +82,7 @@ public class WebSecStats {
 			keySize = cipherSuite.substring(cipherSuite.indexOf("AES_") + 4, cipherSuite.indexOf("_GCM_"));
 			
 			analysis = rank + "," + host + "," + isHTTPS + "," + protocol + "," + keyType + "," + keySize + "," + algorithm + "," + isHSTS + "," + isHSTSLong;
+			
 			System.out.println(analysis);
 		} catch (Exception e) {
 			e.printStackTrace();
