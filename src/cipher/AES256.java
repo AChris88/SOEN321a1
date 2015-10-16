@@ -16,10 +16,22 @@ import java.util.Base64;
  */
 public class AES256 {
 
+	// Question 1.3a
 	// Pu before being converted to Cu
 	private static String plaintextAnonCookie = "user=anonymous,tmstmp=1443657660";
 	// Pa before being converted to Ca
 	private static String authenticatedCookie = "user=admin,tmstmp=1443657660";
+	// The difference observed is that the string length is clearly 4 characters
+	// shorter.
+	// However, as a result, this may (will) change the length of the generated
+	// cipher.
+	// That being said, given the length of the cipher, we could potentially
+	// infer (unless the user's name has as many characters as the word
+	// 'anonymous') if the cookie belongs to an anonymous user or not given that
+	// the cipher length for anonymous users is known to be 44 characters long.
+	// This will remain true until the timestamp value has an extra digit added
+	// to it.
+
 	// Cu generated from the above Pu
 	private static String base64Cipher = "40mO35Yj9cAMFaaOcshT10VwVw6WmbvAEyrI6TxElFY=";
 

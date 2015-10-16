@@ -5,6 +5,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
 
+/**
+ * Class used to break the Caesar cipher and to extract the hidden message.
+ * 
+ * @author Christian Allard 27026188
+ * @created 10/10/2015
+ * @edited 16/10/2015
+ */
+
 public class Caesar {
 
 	// Pre-defined assignment values

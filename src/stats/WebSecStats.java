@@ -18,6 +18,16 @@ import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 
+/**
+ * Class used to analyze the security of connections established to 21,000 out
+ * of the top million sites in the world.
+ * 
+ * @author Christian Allard 27026188
+ * @created 15/10/2015
+ * @edited 16/10/2015
+ *
+ */
+
 public class WebSecStats {
 
 	public static void main(String[] args) {
