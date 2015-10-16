@@ -23,10 +23,41 @@ public class AES256 {
 	// Cu generated from the above Pu
 	private static String base64Cipher = "40mO35Yj9cAMFaaOcshT10VwVw6WmbvAEyrI6TxElFY=";
 
+	/**
+	 * Driver method for editing the cookie.
+	 * 
+	 * @param args
+	 *            command line arguments. Not used
+	 */
 	public static void main(String[] args) {
-		base64Decrypt(base64Cipher);
+		// TODO base64Decrypt(base64Cipher);
+		somethingElse();
 	}
 
+	/**
+	 * 
+	 */
+	private static void somethingElse() {
+		byte[] cipher = Base64.getDecoder().decode(base64Cipher);
+		byte[] anonBytes = plaintextAnonCookie.getBytes();
+		byte[] authBytes = authenticatedCookie.getBytes();
+		byte[] authCipherBytes = new byte[authBytes.length];
+
+		System.out.println("original: " + base64Cipher);
+		for (int j = 0; j < 4; j++) {
+			for (int i = 0; i < authBytes.length; i++) {
+				authCipherBytes[i] = (byte) ((anonBytes[i + j] ^ cipher[i + j]) ^ authBytes[i]);
+			}
+			System.out.println("option#" + (j+1) + ": "
+					+ new String(Base64.getEncoder().encode(authCipherBytes)));
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param cipher
+	 */
 	private static void base64Decrypt(String cipher) {
 
 		byte[] anonBytes = plaintextAnonCookie.getBytes(StandardCharsets.UTF_8);
