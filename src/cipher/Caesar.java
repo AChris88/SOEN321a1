@@ -25,14 +25,28 @@ public class Caesar {
 	private static ArrayList<Integer> potentialOffsets = new ArrayList<Integer>();
 
 	public static void main(String[] args) {
+		// frequency analysis of characters on ciphertext
 		getCharCount();
+		// determine most likely offsets given ciphertext character frequencies
 		setPotentialOffsets();
+
+		System.out.println("These are the potential plaintext values:");
+		// print the potential plaintext values given the known most likely
+		// offsets
+		printPotentialPlaintexts();
+
+		System.out
+				.println("The only one of these that is readable is the 6th, (same as the 9th).");
 
 		// after observing the output of printPotentialPlaintexts,
 		// the following plaintext message was obtained using the offsets
 		// of -8 and 18
 		plainText = "FISHING FRESHWATER BENDS AND ADMIT SWORDFISH RANK OVERWHELMING ANYDAY";
 
+		System.out.println(plainText);
+
+		System.out
+				.println("The hidden message in the third character of each word is:");
 		printHiddenMessage();
 	}
 
@@ -142,7 +156,9 @@ public class Caesar {
 	 */
 	private static void printPotentialPlaintexts() {
 		// iterate through the potential offsets
-		for (int offset : potentialOffsets) {
+		for (int j = 0; j < potentialOffsets.size(); ++j) {
+			int offset = potentialOffsets.get(j);
+			System.out.print((j + 1) + " - ");
 			// iterate through every character in the cipher
 			for (int i = 0; i < cipher.length(); i++) {
 				// unless the character is a space, print out the character
