@@ -39,13 +39,15 @@ public class WebSecStats {
 	public static void main(String[] args) {
 		// Top million site listing
 		String path = "Oct_13_2015_top-1m.csv";
-		
+
 		// Pulls the listing and analyzes all sites in the accepted range.
-		//analyzeSiteListing(path, getStartIndex(27026188), getStartIndex(27077076));
-		
+		analyzeSiteListing(path, getStartIndex(27026188),
+				getStartIndex(27077076));
+
 		/* TESTING */
-		//analyzeSite(1, "facebook.com");
-		//System.out.println("HTTPHeader:\n" + getHTTPHeader("https://facebook.com"));
+//		 analyzeSite(1, "wikipedia.org");
+//		 System.out.println("HTTPHeader:\n" +
+//		 getHTTPHeader("https://facebook.com"));
 	}
 
 	private static int getStartIndex(int studentId) {
@@ -76,7 +78,7 @@ public class WebSecStats {
 	 */
 	private static void analyzeSite(int rank, String domain) {
 		// Setting accepted connection protocols
-		System.setProperty("https.protocols", "SSLv3,TLSv1,TLSv1.1,TLSv1.2");
+//		System.setProperty("https.protocols", "SSLv3,TLSv1,TLSv1.1,TLSv1.2");
 
 		// Instantiating variables required for socket connections
 		SSLSocketFactory factory = null;
@@ -94,7 +96,7 @@ public class WebSecStats {
 		String sigAlgo = "";
 		String httpHeader = "";
 		String httpTmp = "";
-				
+
 		// Instantiating booleans used to verify connection states
 		boolean isHTTPS = true;
 		boolean isHSTS = false;
@@ -112,33 +114,44 @@ public class WebSecStats {
 			socket = factory.createSocket(domain, 443);
 			// Get handle to the session object from the socket connection
 			session = ((SSLSocket) socket).getSession();
-			
-			// If the session is not null, begin extracting socket connection information
-			if (session != null) {
-				
-				httpHeader = getHTTPHeader("https://"+domain);
 
-				if(httpHeader.contains("Strict-Transport-Security")){
-					httpTmp = httpHeader.substring(httpHeader.indexOf("Strict-Transport-Security"));
+			// If the session is not null, begin extracting socket connection
+			// information
+			if (session != null) {
+
+				httpHeader = getHTTPHeader("https://" + domain);
+
+				if (httpHeader.contains("Strict-Transport-Security")) {
+					httpTmp = httpHeader.substring(httpHeader
+							.indexOf("Strict-Transport-Security"));
 					isHSTS = true;
-					if (httpTmp.contains("max-age")){
-						long maxAge = Long.parseLong(httpTmp.substring(httpTmp.indexOf("max-age="), httpTmp.indexOf(';')));
-						if(maxAge >= 2592000) {
+					String flag = "max-age=";
+					if (httpTmp.contains(flag)) {
+						httpTmp = httpTmp.substring(httpTmp.indexOf(flag) + flag.length(), httpTmp.indexOf(']'));
+						if(httpTmp.contains(";"))
+							httpTmp = httpTmp.substring(0, httpTmp.indexOf(';'));
+						long maxAge = Long.parseLong(httpTmp);
+						if (maxAge >= 2592000) {
 							isHSTSLong = true;
 						}
 					}
 				}
-				
+
 				certificates = session.getPeerCertificates();
 				X509Certificate certificate = (X509Certificate) certificates[0];
+
+//				System.out.println(certificate);
 				
 				pubKey = certificate.getPublicKey().toString();
 				sigAlgo = certificate.getSigAlgName();
 
 				algorithm = sigAlgo.substring(0, sigAlgo.indexOf("with"));
-				keyType = pubKey.substring(pubKey.indexOf(' ') + 1, pubKey.indexOf(" public"));
-				keySize = pubKey.substring(pubKey.indexOf(',') + 2, pubKey.indexOf(" bits"));
 				
+				keyType = pubKey.substring(pubKey.indexOf(' ') + 1,
+						pubKey.indexOf(" public"));
+				keySize = pubKey.substring(pubKey.indexOf(',') + 2,
+						pubKey.indexOf(" bits"));
+
 				// Identify host, protocol, and cipher suite
 				host = session.getPeerHost();
 				protocol = session.getProtocol();
@@ -176,9 +189,10 @@ public class WebSecStats {
 						+ "," + keyType + "," + keySize + "," + algorithm + ","
 						+ isHSTS + "," + isHSTSLong + "\n";
 			}
-			// Send anaysis off to be written to a CSV file
+			// Send analysis off to be written to a CSV file
 			recordAnalysis(analysis);
-			// Close the socket connection if it is not null
+
+			// Try to close the socket connection if it is not null
 			if (socket != null)
 				try {
 					socket.close();
@@ -218,7 +232,7 @@ public class WebSecStats {
 		String url = "";
 
 		try {
-			// Create new file reader usng the path of the CSV file
+			// Create new file reader using the path of the CSV file
 			fr = new FileReader(path);
 			// Create new buffered reader using the file reader that was just
 			// created
@@ -247,12 +261,13 @@ public class WebSecStats {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			try {
-				// Close the buffered reader
-				if (br != null)
+			// Try and close the buffered reader if it is not null
+			if (br != null){
+				try {
 					br.close();
-			} catch (Exception e) {
-				e.printStackTrace();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
 		}
 	}
