@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.net.ConnectException;
 import java.net.Socket;
+import java.net.URL;
+import java.net.URLConnection;
 import java.net.UnknownHostException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -14,6 +16,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.Certificate;
 import java.security.cert.X509Certificate;
+import java.util.List;
+import java.util.Map;
+
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
@@ -23,6 +28,7 @@ import javax.net.ssl.SSLSocketFactory;
  * of the top million sites in the world.
  * 
  * @author Christian Allard 27026188
+ * 
  * @created 15/10/2015
  * @edited 16/10/2015
  *
@@ -31,14 +37,15 @@ import javax.net.ssl.SSLSocketFactory;
 public class WebSecStats {
 
 	public static void main(String[] args) {
-		// Set the starting point of the ranger of websites to analyze
-		int[] ranges = { getStartIndex(27026188), getStartIndex(27077076) };
 		// Top million site listing
 		String path = "Oct_13_2015_top-1m.csv";
-		// Goes through the listing and analyzes all sites in the accepted
-		// range.
-		// analyzeSiteListing(path, ranges);
-		analyzeSite(1, "live.com");
+		
+		// Pulls the listing and analyzes all sites in the accepted range.
+		//analyzeSiteListing(path, getStartIndex(27026188), getStartIndex(27077076));
+		
+		/* TESTING */
+		//analyzeSite(1, "facebook.com");
+		//System.out.println("HTTPHeader:\n" + getHTTPHeader("https://facebook.com"));
 	}
 
 	private static int getStartIndex(int studentId) {
@@ -51,8 +58,8 @@ public class WebSecStats {
 		}
 
 		md.update(new Integer(studentId).toString().getBytes());
-
 		BigInteger bi = new BigInteger(1, md.digest());
+
 		return bi.mod(new BigInteger("9890")).multiply(new BigInteger("100"))
 				.intValue() + 1000;
 	}
@@ -79,16 +86,19 @@ public class WebSecStats {
 
 		// Instantiating variables used to store retrieved data
 		String protocol = "";
-		String cipherSuite = "";
 		String host = domain;
 		String keyType = "";
 		String keySize = "";
 		String algorithm = "";
-
+		String pubKey = "";
+		String sigAlgo = "";
+		String httpHeader = "";
+		String httpTmp = "";
+				
 		// Instantiating booleans used to verify connection states
 		boolean isHTTPS = true;
-		boolean isHSTS = true;
-		boolean isHSTSLong = true;
+		boolean isHSTS = false;
+		boolean isHSTSLong = false;
 		boolean hostFound = true;
 		boolean connectionError = false;
 
@@ -102,50 +112,36 @@ public class WebSecStats {
 			socket = factory.createSocket(domain, 443);
 			// Get handle to the session object from the socket connection
 			session = ((SSLSocket) socket).getSession();
-
-			/*
-			 * certificates = session.getPeerCertificates();
-			 * System.out.println("Certificates:"); for (int i = 0; i <
-			 * certificates.length; i++) { System.out.println(((X509Certificate)
-			 * certificates[i]).getSubjectDN()); }
-			 * System.out.println("Peer host is " + session.getPeerHost());
-			 * System.out.println("Cipher is " + session.getCipherSuite());
-			 * System.out.println("Protocol is " + session.getProtocol());
-			 * System.out.println("Session: " + session);
-			 */
-
-			// If the session is not null, begin extracting socket connection
-			// information
+			
+			// If the session is not null, begin extracting socket connection information
 			if (session != null) {
+				
+				httpHeader = getHTTPHeader("https://"+domain);
+
+				if(httpHeader.contains("Strict-Transport-Security")){
+					httpTmp = httpHeader.substring(httpHeader.indexOf("Strict-Transport-Security"));
+					isHSTS = true;
+					if (httpTmp.contains("max-age")){
+						long maxAge = Long.parseLong(httpTmp.substring(httpTmp.indexOf("max-age="), httpTmp.indexOf(';')));
+						if(maxAge >= 2592000) {
+							isHSTSLong = true;
+						}
+					}
+				}
+				
+				certificates = session.getPeerCertificates();
+				X509Certificate certificate = (X509Certificate) certificates[0];
+				
+				pubKey = certificate.getPublicKey().toString();
+				sigAlgo = certificate.getSigAlgName();
+
+				algorithm = sigAlgo.substring(0, sigAlgo.indexOf("with"));
+				keyType = pubKey.substring(pubKey.indexOf(' ') + 1, pubKey.indexOf(" public"));
+				keySize = pubKey.substring(pubKey.indexOf(',') + 2, pubKey.indexOf(" bits"));
+				
 				// Identify host, protocol, and cipher suite
 				host = session.getPeerHost();
 				protocol = session.getProtocol();
-				cipherSuite = session.getCipherSuite();
-
-				// Identify encryption algorithm
-				algorithm = cipherSuite
-						.substring(cipherSuite.lastIndexOf('_') + 1);
-
-				// Sets flag stating if the site uses HTTPS
-				if (protocol.equals("SSL") || protocol.equals("TLSv1")
-						|| protocol.equals("TLSv1.1")
-						|| protocol.equals("TLSv1.2"))
-					isHTTPS = true;
-
-				// Identify key type used
-				if (cipherSuite.contains("ECDHE"))
-					keyType = "ECDHE";
-				else if (cipherSuite.contains("ECDSA"))
-					keyType = "ECDSA";
-				else if (cipherSuite.contains("_RSA_"))
-					keyType = "RSA";
-
-				// Identify key size used
-				if (cipherSuite.contains("AES_")
-						&& cipherSuite.contains("_GCM_"))
-					keySize = cipherSuite.substring(
-							cipherSuite.indexOf("AES_") + 4,
-							cipherSuite.indexOf("_GCM_"));
 			}
 		} catch (UnknownHostException e) {
 			// 404 response code
@@ -153,7 +149,7 @@ public class WebSecStats {
 		} catch (ConnectException e) {
 			if (e.getMessage().contains("Connection refused")) {
 				// cannot connect due to set protocols only accepting SSL/TLS
-				isHSTS = false;
+				isHTTPS = false;
 			} else {
 				connectionError = true;
 			}
@@ -166,23 +162,14 @@ public class WebSecStats {
 			if (connectionError) {
 				// A connection error occurred
 				errorMessage = "connection error";
-				analysis = rank + "," + host + "," + errorMessage + ","
-						+ errorMessage + "," + errorMessage + ","
-						+ errorMessage + "," + errorMessage + ","
-						+ errorMessage + "," + errorMessage + "\n";
 			} else if (!hostFound) {
 				// The requested domain was not found
 				errorMessage = "404 response code";
+			} else if (!errorMessage.equals("")) {
 				analysis = rank + "," + host + "," + errorMessage + ","
 						+ errorMessage + "," + errorMessage + ","
 						+ errorMessage + "," + errorMessage + ","
 						+ errorMessage + "," + errorMessage + "\n";
-			} else if (!isHSTS) {
-				// The requested domain does not support HSTS
-				isHSTSLong = false;
-				isHTTPS = false;
-				analysis = rank + "," + host + "," + isHTTPS + ",,,,," + isHSTS
-						+ "," + isHSTSLong + "\n";
 			} else {
 				// No errors were encountered in analyzing the requested domain
 				analysis = rank + "," + host + "," + isHTTPS + "," + protocol
@@ -191,13 +178,13 @@ public class WebSecStats {
 			}
 			// Send anaysis off to be written to a CSV file
 			recordAnalysis(analysis);
-			try {
-				// Close the socket connection if it is not null
-				if (socket != null)
+			// Close the socket connection if it is not null
+			if (socket != null)
+				try {
 					socket.close();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 		}
 	}
 
@@ -211,13 +198,13 @@ public class WebSecStats {
 	 *            indicates the starting point of the ranges of surplus websites
 	 *            to analyze.
 	 */
-	private static void analyzeSiteListing(String path, int[] ranges) {
+	private static void analyzeSiteListing(String path, int range1, int range2) {
 		// Set start and end of the first range
-		int startRange1 = ranges[0];
+		int startRange1 = range1;
 		int endRange1 = startRange1 + 10000;
 
 		// Set start and end of the second range
-		int startRange2 = ranges[1];
+		int startRange2 = range2;
 		int endRange2 = startRange2 + 10000;
 
 		// Instantiate the variables needed to handle the CSV file
@@ -268,6 +255,24 @@ public class WebSecStats {
 				e.printStackTrace();
 			}
 		}
+	}
+
+	private static String getHTTPHeader(String domain) {
+		URL url = null;
+		URLConnection con = null;
+		Map<String, List<String>> header = null;
+		StringBuilder str = new StringBuilder();
+		try {
+			url = new URL(domain);
+			con = url.openConnection();
+			header = con.getHeaderFields();
+			for (Map.Entry<String, List<String>> entry : header.entrySet()) {
+				str.append(entry.getKey() + " : " + entry.getValue() + "\n");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return str.toString();
 	}
 
 	/**
