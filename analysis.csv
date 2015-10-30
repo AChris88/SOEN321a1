@@ -1,67 +1,1463 @@
-
-1,google.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-2,facebook.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-3,youtube.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-4,baidu.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-5,yahoo.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-6,amazon.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-7,wikipedia.org,true,TLSv1.2,ECDHE,128,SHA256,true,true
-8,qq.com,true,TLSv1.1,ECDHE,,SHA,true,true
-9,twitter.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-10,google.co.in,true,TLSv1.2,ECDHE,128,SHA256,true,true
-11,taobao.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-12,live.com,false,,,,,false,false
-1,google.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-2,facebook.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-3,youtube.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-4,baidu.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-5,yahoo.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-6,amazon.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-7,wikipedia.org,true,TLSv1.2,ECDHE,128,SHA256,true,true
-8,qq.com,true,TLSv1.1,ECDHE,,SHA,true,true
-9,twitter.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-10,google.co.in,true,TLSv1.2,ECDHE,128,SHA256,true,true
-11,taobao.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-12,live.com,false,,,,,false,false
+1,google.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+2,facebook.com,TRUE,TLSv1.2,EC,256,SHA1,TRUE,TRUE
+3,youtube.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+4,baidu.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+5,yahoo.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+6,amazon.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+7,wikipedia.org,TRUE,TLSv1.2,EC,256,SHA256,TRUE,TRUE
+8,qq.com,TRUE,TLSv1.1,RSA,2048,SHA256,FALSE,FALSE
+9,twitter.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+10,google.co.in,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+11,taobao.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+12,live.com,FALSE,,,,,FALSE,FALSE
 13,sina.com.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
-14,linkedin.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
+14,linkedin.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,FALSE
 15,yahoo.co.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
-16,weibo.com,false,,,,,false,false
-17,ebay.com,true,TLSv1.2,RSA,128,SHA256,true,true
-18,google.co.jp,true,TLSv1.2,ECDHE,128,SHA256,true,true
-19,yandex.ru,true,TLSv1.2,ECDHE,128,SHA256,true,true
+16,weibo.com,FALSE,,,,,FALSE,FALSE
+17,ebay.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+18,google.co.jp,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+19,yandex.ru,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
 20,hao123.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
-21,vk.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-22,bing.com,true,TLSv1.2,ECDHE,,SHA256,true,true
-23,google.de,true,TLSv1.2,ECDHE,128,SHA256,true,true
-24,t.co,true,TLSv1.2,ECDHE,128,SHA256,true,true
-25,instagram.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-26,msn.com,true,TLSv1.2,ECDHE,,SHA256,true,true
-27,amazon.co.jp,true,TLSv1.2,ECDHE,128,SHA256,true,true
-28,google.co.uk,true,TLSv1.2,ECDHE,128,SHA256,true,true
+21,vk.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+22,bing.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+23,google.de,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+24,t.co,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+25,instagram.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+26,msn.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+27,amazon.co.jp,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+28,google.co.uk,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
 29,aliexpress.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
-30,pinterest.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-31,ask.com,false,,,,,false,false
-32,blogspot.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-33,apple.com,true,TLSv1.2,RSA,,SHA,true,true
-34,tmall.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-35,wordpress.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-36,reddit.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-37,google.fr,true,TLSv1.2,ECDHE,128,SHA256,true,true
-38,paypal.com,true,TLSv1.2,ECDHE,,SHA,true,true
-39,onclickads.net,true,TLSv1.2,ECDHE,,SHA,true,true
-40,google.com.br,true,TLSv1.2,ECDHE,128,SHA256,true,true
-41,mail.ru,true,TLSv1.2,ECDHE,128,SHA256,true,true
-42,tumblr.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-43,sohu.com,true,TLSv1,RSA,,SHA,true,true
-44,microsoft.com,true,TLSv1.2,RSA,,SHA256,true,true
-45,imgur.com,true,TLSv1.2,ECDHE,128,SHA256,true,true
-46,google.ru,true,TLSv1.2,ECDHE,128,SHA256,true,true
+30,pinterest.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+31,ask.com,FALSE,,,,,FALSE,FALSE
+32,blogspot.com,TRUE,TLSv1.2,EC,256,SHA256,TRUE,TRUE
+33,apple.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+34,tmall.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+35,wordpress.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+36,reddit.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+37,google.fr,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+38,paypal.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+39,onclickads.net,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,FALSE
+40,google.com.br,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41,mail.ru,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+42,tumblr.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+43,sohu.com,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+44,microsoft.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,FALSE
+45,imgur.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+46,google.ru,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
 47,xvideos.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
-48,imdb.com,false,,,,,false,false
-49,google.it,true,TLSv1.2,ECDHE,128,SHA256,true,true
-50,google.es,true,TLSv1.2,ECDHE,128,SHA256,true,true
-1,live.com,false,,,,,false,false
-1,live.com,false,,,,,false,false
-1,live.com,false,,,,,false,false
-1,live.com,false,,,,,false,false
+48,imdb.com,FALSE,,,,,FALSE,FALSE
+49,google.it,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+50,google.es,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+51,gmw.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+52,netflix.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,FALSE
+53,fc2.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+54,amazon.de,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+55,360.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+56,googleadservices.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+57,alibaba.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+58,go.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+59,stackoverflow.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+60,google.com.mx,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+61,google.ca,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+62,ok.ru,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+63,google.com.hk,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+64,craigslist.org,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+65,tianya.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+66,amazon.co.uk,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+67,pornhub.com,TRUE,TLSv1.2,RSA,2048,SHA1,TRUE,FALSE
+68,rakuten.co.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+69,blogger.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+70,naver.com,FALSE,,,,,FALSE,FALSE
+71,espn.go.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+72,google.com.tr,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+73,xhamster.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+74,soso.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+75,outbrain.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+76,nicovideo.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+77,cnn.com,FALSE,,,,,FALSE,FALSE
+78,google.co.id,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+79,kat.cr,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+80,diply.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+81,flipkart.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+82,dropbox.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+83,bbc.co.uk,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+84,github.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+85,amazon.in,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+86,googleusercontent.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+87,adcash.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+88,ebay.de,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+89,google.com.au,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+90,xinhuanet.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+91,popads.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+92,google.pl,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+93,google.co.kr,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+94,dailymotion.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+95,pixnet.net,FALSE,,,,,FALSE,FALSE
+96,ebay.co.uk,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+97,sogou.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+98,nytimes.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+99,bongacams.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+100,booking.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+101,adnetworkperformance.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+102,bbc.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+103,jd.com,FALSE,,,,,FALSE,FALSE
+104,adobe.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+105,livedoor.jp,FALSE,,,,,FALSE,FALSE
+106,dailymail.co.uk,FALSE,,,,,FALSE,FALSE
+107,163.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+108,wikia.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+109,indiatimes.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+110,directrev.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+111,china.com.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+112,chase.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+113,coccoc.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+114,china.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+115,uol.com.br,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+116,dmm.co.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+117,huffingtonpost.com,FALSE,,,,,FALSE,FALSE
+118,alipay.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+119,xnxx.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+120,buzzfeed.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+121,google.com.tw,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+122,youku.com,FALSE,,,,,FALSE,FALSE
+123,google.com.sa,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+124,amazon.cn,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+125,google.com.eg,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+126,blogspot.in,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+127,google.com.ar,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+128,ameblo.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+129,microsoftonline.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+130,amazon.fr,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+131,tradeadexchange.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+132,google.co.th,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+133,theguardian.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+134,amazonaws.com,FALSE,,,,,FALSE,FALSE
+135,slideshare.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+136,google.com.pk,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+137,etsy.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+138,walmart.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+139,chinadaily.com.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+140,daum.net,FALSE,,,,,FALSE,FALSE
+141,bankofamerica.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+142,yelp.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+143,ettoday.net,TRUE,,,,,FALSE,FALSE
+144,twitch.tv,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+145,globo.com,TRUE,,,,,FALSE,FALSE
+146,cnet.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+147,tudou.com,FALSE,,,,,FALSE,FALSE
+148,whatsapp.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+149,aol.com,FALSE,,,,,FALSE,FALSE
+150,office.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+151,flickr.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+152,stackexchange.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+153,google.nl,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+154,indeed.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+155,quora.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,FALSE
+156,weather.com,FALSE,,,,,FALSE,FALSE
+157,snapdeal.com,TRUE,,,,,FALSE,FALSE
+158,amazon.it,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+159,redtube.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+160,reimageplus.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+161,soundcloud.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+162,naver.jp,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+163,bp.blogspot.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+164,cntv.cn,TRUE,,,,,FALSE,FALSE
+165,adf.ly,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+166,douban.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+167,forbes.com,TRUE,,,,,FALSE,FALSE
+168,youporn.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+169,wellsfargo.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+170,zillow.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+171,vice.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+172,blogspot.co.id,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+173,google.co.za,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+174,ilividnewtab.com,FALSE,,,,,FALSE,FALSE
+175,tubecup.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+176,office365.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+177,gmail.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+178,google.co.ve,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+179,leboncoin.fr,TRUE,,,,,FALSE,FALSE
+180,detail.tmall.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+181,godaddy.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+182,ikea.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+183,vimeo.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+184,kakaku.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+185,target.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+186,google.gr,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+187,salesforce.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+188,goo.ne.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+189,about.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+190,loading-delivery2.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+191,tripadvisor.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+192,bestbuy.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+193,allegro.pl,FALSE,,,,,FALSE,FALSE
+194,livejournal.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+195,adplxmd.com,TRUE,TLSv1,RSA,4096,SHA256,FALSE,FALSE
+196,avito.ru,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,FALSE
+197,foxnews.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+198,themeforest.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+199,wordpress.org,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,FALSE
+200,deviantart.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+201,theladbible.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+202,nfl.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+203,nih.gov,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+204,9gag.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+205,w3schools.com,FALSE,,,,,FALSE,FALSE
+206,feedly.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+207,washingtonpost.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+208,doublepimp.com,TRUE,TLSv1.1,RSA,4096,SHA256,FALSE,FALSE
+209,wikihow.com,FALSE,,,,,FALSE,FALSE
+210,files.wordpress.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+211,google.com.ua,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+212,skype.com,FALSE,,,,,FALSE,FALSE
+213,gfycat.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+214,taboola.com,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+215,businessinsider.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+216,softonic.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+217,terraclicks.com,TRUE,,,,,FALSE,FALSE
+218,zol.com.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+219,mediafire.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+220,mozilla.org,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+221,pixiv.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+222,onet.pl,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+223,telegraph.co.uk,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+224,google.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+225,americanexpress.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+226,akamaihd.net,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+227,mystart.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+228,amazon.es,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+229,google.com.co,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+230,hclips.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+231,wix.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+232,doorblog.jp,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+233,comcast.net,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+234,ups.com,TRUE,,,,,FALSE,FALSE
+235,huanqiu.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+236,nametests.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+237,archive.org,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+238,google.com.sg,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+239,avg.com,FALSE,,,,,FALSE,FALSE
+240,homedepot.com,FALSE,,,,,FALSE,FALSE
+241,weebly.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+242,steamcommunity.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+243,secureserver.net,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+244,wikimedia.org,TRUE,TLSv1.2,EC,256,SHA256,TRUE,TRUE
+245,usps.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+246,google.be,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+247,zhihu.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+248,bitauto.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+249,force.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+250,google.ro,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+251,addthis.com,TRUE,,,,,FALSE,FALSE
+252,ebay-kleinanzeigen.de,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+253,ndtv.com,FALSE,,,,,FALSE,FALSE
+254,google.com.ph,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+255,bilibili.com,FALSE,,,,,FALSE,FALSE
+256,shutterstock.com,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+257,answers.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+258,tlbb8.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+259,trackingclick.net,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+260,mercadolivre.com.br,FALSE,,,,,FALSE,FALSE
+261,xywy.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+262,gamer.com.tw,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+263,github.io,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+264,google.com.ng,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+265,web.de,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+266,ifeng.com,FALSE,,,,,FALSE,FALSE
+267,spaceshipads.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+268,detik.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+269,sourceforge.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+270,mailchimp.com,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+271,popcash.net,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+272,steampowered.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+273,orange.fr,FALSE,,,,,FALSE,FALSE
+274,bild.de,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+275,hp.com,TRUE,,,,,FALSE,FALSE
+276,google.se,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+277,uptodown.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+278,xfinity.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+279,speedtest.net,FALSE,,,,,FALSE,FALSE
+280,gmx.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+281,rambler.ru,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+282,dmm.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+283,hdfcbank.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+284,webmd.com,FALSE,,,,,FALSE,FALSE
+285,wordreference.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+286,google.at,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+287,usatoday.com,FALSE,,,,,FALSE,FALSE
+288,goodreads.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+289,fbcdn.net,TRUE,TLSv1.2,EC,256,SHA1,TRUE,TRUE
+290,livejasmin.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+291,youm7.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+292,groupon.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+293,hootsuite.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+294,varzesh3.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+295,stumbleupon.com,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+296,icicibank.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+297,wp.pl,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+298,blog.jp,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+299,haiwainet.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+300,att.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+301,capitalone.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+302,bloomberg.com,TRUE,TLSv1.1,RSA,2048,SHA256,FALSE,FALSE
+303,spiegel.de,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+304,caijing.com.cn,FALSE,,,,,FALSE,FALSE
+305,terrapops.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+306,google.com.pe,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+307,thesaurus.com,FALSE,,,,,FALSE,FALSE
+308,t-online.de,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+309,adidas.tmall.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+310,blogfa.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+311,fedex.com,TRUE,,,,,FALSE,FALSE
+312,google.pt,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+313,xuite.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+314,hulu.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+315,spotify.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+316,2ch.net,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+317,watsons.tmall.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+318,bet365.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+319,amazon.ca,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+320,mashable.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+321,pandora.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+322,mlb.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+323,extratorrent.cc,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+324,media.tumblr.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+325,wsj.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+326,ign.com,FALSE,,,,,FALSE,FALSE
+327,mama.cn,FALSE,,,,,FALSE,FALSE
+328,paytm.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+329,seznam.cz,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+330,samsung.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+331,chaoshi.tmall.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+332,ebay.in,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+333,styletv.com.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+334,engadget.com,FALSE,,,,,FALSE,FALSE
+335,cnzz.com,FALSE,,,,,FALSE,FALSE
+336,accuweather.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+337,google.ae,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+338,udn.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+339,badoo.com,FALSE,,,,,FALSE,FALSE
+340,youth.cn,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+341,1905.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+342,google.ch,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+343,gsmarena.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+344,putlocker.is,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+345,chaturbate.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+346,dell.com,TRUE,,,,,FALSE,FALSE
+347,life.com.tw,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+348,nownews.com,FALSE,,,,,FALSE,FALSE
+349,livedoor.biz,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+350,people.com.cn,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+351,warmportrait.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+352,verizonwireless.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+353,kaskus.co.id,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+354,reuters.com,TRUE,,,,,FALSE,FALSE
+355,39.net,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+356,1688.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+357,zendesk.com,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+358,abs-cbnnews.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+359,onlinesbi.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+360,bleacherreport.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+361,rediff.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+362,twimg.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+363,reference.com,FALSE,,,,,FALSE,FALSE
+364,trello.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+365,google.cl,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+366,jabong.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+367,ijreview.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+368,likes.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+369,pconline.com.cn,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+370,google.cz,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+371,google.com.bd,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+372,enet.com.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+373,mega.nz,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+374,iqiyi.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+375,macys.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+376,milliyet.com.tr,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+377,sahibinden.com,TRUE,,,,,FALSE,FALSE
+378,rt.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+379,icloud.com,TRUE,TLSv1.2,RSA,2048,SHA1,TRUE,TRUE
+380,mydomainadvisor.com,FALSE,,,,,FALSE,FALSE
+381,rutracker.org,FALSE,,,,,FALSE,FALSE
+382,tistory.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+383,smzdm.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+384,yaolan.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+385,google.ie,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+386,ask.fm,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+387,kickstarter.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+388,kouclo.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+389,baike.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+390,quikr.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+391,haosou.com,TRUE,,,,,FALSE,FALSE
+392,evernote.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+393,infusionsoft.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+394,impress.co.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+395,lady8844.com,FALSE,,,,,FALSE,FALSE
+396,google.dz,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+397,slickdeals.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+398,google.az,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+399,gameforge.com,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+400,ebay.it,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+401,kohls.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+402,eksisozluk.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+403,tube8.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+404,cbssports.com,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+405,liveinternet.ru,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+406,thefreedictionary.com,TRUE,TLSv1,RSA,4096,SHA256,FALSE,FALSE
+407,google.hu,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+408,4shared.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+409,babytree.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+410,ebay.com.au,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+411,hurriyet.com.tr,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+412,google.no,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+413,chinatimes.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+414,oracle.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+415,ce.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+416,upornia.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+417,blogimg.jp,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+418,taleo.net,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+419,meetup.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+420,teepr.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+421,scribd.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+422,sberbank.ru,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+423,repubblica.it,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+424,goal.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+425,espncricinfo.com,FALSE,,,,,FALSE,FALSE
+426,eastday.com,FALSE,,,,,FALSE,FALSE
+427,elpais.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+428,photobucket.com,FALSE,,,,,FALSE,FALSE
+429,newegg.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+430,buzzfil.net,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+431,yandex.ua,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+432,neobux.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+433,libero.it,FALSE,,,,,FALSE,FALSE
+434,ewt.cc,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+435,oeeee.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+436,vid.me,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+437,ppomppu.co.kr,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+438,uploaded.net,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+439,torrentz.eu,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+440,theverge.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+441,onedio.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+442,lifehacker.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+443,ltn.com.tw,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+444,kinopoisk.ru,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+445,slack.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+446,list-manage.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+447,google.co.il,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+448,olx.in,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+449,livedoor.com,FALSE,,,,,FALSE,FALSE
+450,gap.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+451,ameba.jp,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+452,marca.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+453,citi.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+454,qunar.com,FALSE,,,,,FALSE,FALSE
+455,aparat.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+456,stockstar.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+457,shopclues.com,TRUE,,,,,FALSE,FALSE
+458,pinimg.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+459,cloudfront.net,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+460,fiverr.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+461,xda-developers.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+462,liveadexchanger.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+463,time.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+464,disqus.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+465,free.fr,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+466,gizmodo.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+467,xe.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+468,lowes.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+469,naukri.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+470,hm.com,FALSE,,,,,FALSE,FALSE
+471,retailmenot.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+472,liputan6.com,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+473,savefrom.net,TRUE,,,,,FALSE,FALSE
+474,kompas.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+475,youboy.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+476,nyaa.se,FALSE,,,,,FALSE,FALSE
+477,4dsply.com,TRUE,,,,,FALSE,FALSE
+478,epweike.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+479,autohome.com.cn,FALSE,,,,,FALSE,FALSE
+480,youradexchange.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+481,independent.co.uk,TRUE,,,,,FALSE,FALSE
+482,battle.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+483,mobile.de,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+484,hotels.com,TRUE,,,,,FALSE,FALSE
+485,techcrunch.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+486,justdial.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+487,nbcnews.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+488,lenovo.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+489,timeanddate.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+490,nordstrom.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+491,surveymonkey.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+492,zippyshare.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+493,admtpmp127.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+494,torrentz.in,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+495,tabelog.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+496,gamefaqs.com,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+497,google.fi,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+498,expedia.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+499,allrecipes.com,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+500,playstation.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+501,exoclick.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+502,rbc.ru,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+503,souq.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+504,freegameszonetab.com,FALSE,,,,,FALSE,FALSE
+505,17ok.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+506,corriere.it,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+507,airbnb.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+508,asos.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+509,kinogo.co,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+510,chip.de,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+511,gmarket.co.kr,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+512,sabq.org,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+513,connect5364.com,FALSE,,,,,FALSE,FALSE
+514,intuit.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+515,bhaskar.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+516,wunderground.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+517,webssearches.com,FALSE,,,,,FALSE,FALSE
+518,google.com.vn,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+519,blackboard.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+520,eyny.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+521,glassdoor.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+522,ancestry.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+523,kijiji.ca,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+524,chinaz.com,FALSE,,,,,FALSE,FALSE
+525,gmanetwork.com,FALSE,,,,,FALSE,FALSE
+526,digikala.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+527,mercadolibre.com.ar,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+528,instructables.com,TRUE,,,,,FALSE,FALSE
+529,subscene.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+530,youtube-mp3.org,FALSE,,,,,FALSE,FALSE
+531,urdupoint.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+532,mirror.co.uk,FALSE,,,,,FALSE,FALSE
+533,npr.org,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+534,elmundo.es,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+535,shopify.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+536,myway.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+537,hatena.ne.jp,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+538,olx.pl,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+539,google.sk,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+540,azlyrics.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+541,doubleclick.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+542,people.com,FALSE,,,,,FALSE,FALSE
+543,codecanyon.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+544,realtor.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+545,box.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,FALSE
+546,issuu.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+547,xunlei.com,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+548,okcupid.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+549,nifty.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+550,ero-advertising.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+551,vcommission.com,TRUE,,,,,FALSE,FALSE
+552,beeg.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+553,cnbeta.com,TRUE,,,,,FALSE,FALSE
+554,verizon.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+555,streamcloud.eu,FALSE,,,,,FALSE,FALSE
+556,jimdo.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+557,rottentomatoes.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+558,6pm.com,TRUE,,,,,FALSE,FALSE
+559,clien.net,TRUE,,,,,FALSE,FALSE
+560,wired.com,FALSE,,,,,FALSE,FALSE
+561,seesaa.net,TRUE,,,,,FALSE,FALSE
+562,bukalapak.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+563,discovercard.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+564,kooora.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+565,kayak.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+566,yts.to,TRUE,TLSv1.2,RSA,4096,SHA256,TRUE,TRUE
+567,blogspot.jp,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+568,albawabhnews.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+569,livescore.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+570,hespress.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+571,so-net.ne.jp,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+572,costco.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+573,sh.st,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+574,focus.de,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+575,douyutv.com,FALSE,,,,,FALSE,FALSE
+576,irctc.co.in,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+577,wow.com,FALSE,,,,,FALSE,FALSE
+578,mercadolibre.com.ve,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+579,moneycontrol.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+580,vnexpress.net,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+581,taringa.net,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+582,subito.it,TRUE,,,,,FALSE,FALSE
+583,urbandictionary.com,FALSE,,,,,FALSE,FALSE
+584,change.org,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+585,squarespace.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+586,ci123.com,FALSE,,,,,FALSE,FALSE
+587,instructure.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+588,medium.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+589,wetransfer.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+590,nike.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+591,mixi.jp,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+592,zomato.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+593,statcounter.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+594,haber7.com,FALSE,,,,,FALSE,FALSE
+595,staticwebdom.com,TRUE,,,,,FALSE,FALSE
+596,tmz.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+597,airtel.in,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+598,ebay.fr,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+599,duckduckgo.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+600,bestadbid.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,FALSE
+601,blogspot.mx,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+602,google.com.my,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+603,r10.net,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+604,lenta.ru,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+605,drudgereport.com,FALSE,,,,,FALSE,FALSE
+606,php.net,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+607,latimes.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+608,sakura.ne.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+609,agoda.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+610,gazeta.pl,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+611,siteadvisor.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+612,ca.gov,TRUE,,,,,FALSE,FALSE
+613,ytimg.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+614,overstock.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+615,11st.co.kr,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+616,asana.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+617,yandex.com.tr,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+618,donga.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+619,goodgamestudios.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+620,makemytrip.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+621,domaintools.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+622,trulia.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+623,k618.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+624,pof.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+625,youdao.com,TRUE,,,,,FALSE,FALSE
+626,asus.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+627,thepiratebay.la,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+628,pch.com,TRUE,,,,,FALSE,FALSE
+629,lemonde.fr,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+630,mihanblog.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+631,lazada.co.id,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+632,cookpad.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+633,cnbc.com,TRUE,,,,,FALSE,FALSE
+634,constantcontact.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+635,hupu.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+636,wonderlandads.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,FALSE
+637,rednet.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+638,yodobashi.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+639,yandex.kz,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+640,japanpost.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+641,aweber.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+642,southwest.com,TRUE,,,,,FALSE,FALSE
+643,woot.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+644,zulily.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+645,csdn.net,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+646,tinyurl.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+647,abcnews.go.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+648,intoday.in,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+649,yallakora.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+650,superuser.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+651,udemy.com,TRUE,TLSv1.2,EC,256,SHA256,TRUE,TRUE
+652,lefigaro.fr,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+653,freepik.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+654,itmedia.co.jp,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+655,2mdn.info,TRUE,,,,,FALSE,FALSE
+656,semrush.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+657,staples.com,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+658,wayfair.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+659,bomb01.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+660,sharepoint.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+661,musicboxnewtab.com,FALSE,,,,,FALSE,FALSE
+662,youjizz.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+663,researchgate.net,TRUE,TLSv1.2,RSA,4096,SHA256,TRUE,FALSE
+664,blog.me,FALSE,,,,,FALSE,FALSE
+665,pcmag.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+666,interia.pl,TRUE,,,,,FALSE,FALSE
+667,hostgator.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+668,eventbrite.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+669,chron.com,TRUE,,,,,FALSE,FALSE
+670,appledaily.com.tw,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+671,eonline.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+672,gigazine.net,TRUE,,,,,FALSE,FALSE
+673,bitly.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+674,vetogate.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+675,swagbucks.com,TRUE,,,,,FALSE,FALSE
+676,workercn.cn,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+677,cbs.com,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+678,stamplive.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+679,ero-video.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+680,suning.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+681,b5m.com,TRUE,,,,,FALSE,FALSE
+682,slate.com,FALSE,,,,,FALSE,FALSE
+683,sears.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+684,custhelp.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+685,fidelity.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+686,goo.gl,TRUE,TLSv1.2,EC,256,SHA256,TRUE,TRUE
+687,onlylady.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+688,asahi.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+689,foodnetwork.com,TRUE,,,,,FALSE,FALSE
+690,mercadolibre.com.mx,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+691,flirchi.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+692,ensonhaber.com,TRUE,,,,,FALSE,FALSE
+693,norton.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+694,houzz.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,FALSE
+695,315che.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+696,cbsnews.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+697,upwork.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+698,coursera.org,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+699,abril.com.br,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+700,shareba.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+701,billdesk.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+702,howtogeek.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+703,nasa.gov,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+704,biglobe.ne.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+705,marketwatch.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+706,wikiwiki.jp,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+707,voc.com.cn,TRUE,,,,,FALSE,FALSE
+708,gearbest.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+709,58.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+710,bodybuilding.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+711,liveleak.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+712,zing.vn,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+713,zoho.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+714,tokopedia.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+715,microsoftstore.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+716,rightmove.co.uk,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+717,bookmyshow.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+718,histats.com,TRUE,,,,,FALSE,FALSE
+719,lequipe.fr,TRUE,,,,,FALSE,FALSE
+720,google.dk,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+721,patch.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+722,chinaso.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+723,windows.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+724,egou.com,TRUE,,,,,FALSE,FALSE
+725,nikkei.com,FALSE,,,,,FALSE,FALSE
+726,mystartsearch.com,FALSE,,,,,FALSE,FALSE
+727,nhk.or.jp,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+728,hatenablog.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+729,gemius.pl,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+730,wp.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+731,pantip.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+732,gawker.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+733,rapidgator.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+734,food.com,TRUE,,,,,FALSE,FALSE
+735,nydailynews.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+736,backpage.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+737,nikkeibp.co.jp,FALSE,,,,,FALSE,FALSE
+738,shareasale.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+739,littlethings.com,FALSE,,,,,FALSE,FALSE
+740,zara.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+741,cdiscount.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+742,tribunnews.com,FALSE,,,,,FALSE,FALSE
+743,farsnews.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+744,momoshop.com.tw,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+745,bhphotovideo.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+746,olx.com.br,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+747,popsugar.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+748,twoo.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+749,exblog.jp,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+750,clipconverter.cc,FALSE,,,,,FALSE,FALSE
+751,fanduel.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+752,java.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+753,t-mobile.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+754,ria.ru,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+755,academia.edu,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+756,thesportbible.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+757,behance.net,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+758,e-hentai.org,FALSE,,,,,FALSE,FALSE
+759,list.tmall.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+760,messenger.com,TRUE,TLSv1.2,EC,256,SHA1,TRUE,TRUE
+761,zappos.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+762,ticketmaster.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+763,dropbooks.tv,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+764,mynet.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+765,usaa.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+766,reverso.net,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+767,myfitnesspal.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+768,topix.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+769,techradar.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+770,investing.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+771,adservingsolutionsinc.com,TRUE,,,,,FALSE,FALSE
+772,clixsense.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+773,babycenter.com,FALSE,,,,,FALSE,FALSE
+774,commentcamarche.net,TRUE,,,,,FALSE,FALSE
+775,ibm.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+776,gamespot.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+777,xbox.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+778,gismeteo.ru,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,FALSE
+779,jrj.com.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+780,fanli.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+781,atlassian.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+782,sbnation.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+783,mayoclinic.org,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+784,sciencedirect.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+785,leagueoflegends.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+786,milanuncios.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+787,jcpenney.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+788,nypost.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+789,olx.ua,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+790,mobile01.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+791,weblio.jp,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+792,mi.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+793,dianping.com,FALSE,,,,,FALSE,FALSE
+794,webex.com,FALSE,,,,,FALSE,FALSE
+795,himado.in,FALSE,,,,,FALSE,FALSE
+796,cracked.com,TRUE,,,,,FALSE,FALSE
+797,kdnet.net,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+798,mit.edu,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+799,4chan.org,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+800,emol.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+801,www.gov.uk,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+802,europa.eu,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+803,faithtap.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+804,google.co.nz,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+805,megapopads.com,TRUE,,,,,FALSE,FALSE
+806,aa.com,TRUE,,,,,FALSE,FALSE
+807,androidcentral.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+808,disq.us,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+809,thewatchseries.to,FALSE,,,,,FALSE,FALSE
+810,123rf.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+811,informer.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+812,elmogaz.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+813,wiktionary.org,TRUE,TLSv1.2,EC,256,SHA256,TRUE,TRUE
+814,adp.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+815,thedailybeast.com,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+816,delta-homes.com,FALSE,,,,,FALSE,FALSE
+817,cbc.ca,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+818,anitube.se,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+819,auction.co.kr,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+820,ted.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+821,jumia.com.ng,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+822,usbank.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+823,atwiki.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+824,digitaltrends.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+825,facenama.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+826,delta.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+827,wav.tv,FALSE,,,,,FALSE,FALSE
+828,novinky.cz,FALSE,,,,,FALSE,FALSE
+829,rdsa2012.com,TRUE,,,,,FALSE,FALSE
+830,state.gov,TRUE,,,,,FALSE,FALSE
+831,tnaflix.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+832,india.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+833,mega.co.nz,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+834,news.com.au,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+835,elwatannews.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+836,infoseek.co.jp,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+837,filehippo.com,TRUE,,,,,FALSE,FALSE
+838,alicdn.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+839,vk.me,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+840,united.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+841,plarium.com,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+842,hubspot.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+843,21cn.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+844,gutefrage.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+845,netteller.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+846,blogspot.com.tr,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+847,yoka.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+848,dreamstime.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+849,all2lnk.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+850,agar.io,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+851,sozcu.com.tr,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+852,investopedia.com,FALSE,,,,,FALSE,FALSE
+853,ea.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+854,geocities.jp,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+855,acfun.tv,FALSE,,,,,FALSE,FALSE
+856,primewire.ag,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+857,prntscr.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+858,priceline.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+859,redirectvoluum.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+860,google.bg,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+861,drtuber.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+862,sfgate.com,TRUE,,,,,FALSE,FALSE
+863,quanjing.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+864,nbcsports.com,TRUE,,,,,FALSE,FALSE
+865,gazzetta.it,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+866,mackeeper.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+867,saramin.co.kr,TRUE,TLSv1,RSA,2048,SHA1,TRUE,FALSE
+868,jin115.com,FALSE,,,,,FALSE,FALSE
+869,deviantart.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+870,thekitchn.com,FALSE,,,,,FALSE,FALSE
+871,ampclicks.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+872,theatlantic.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+873,vi-view.com,TRUE,,,,,FALSE,FALSE
+874,offpageads.com,TRUE,,,,,FALSE,FALSE
+875,giphy.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+876,folha.uol.com.br,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+877,blogspot.com.eg,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+878,getpocket.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+879,android.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+880,cam4.com,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+881,bluehost.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+882,ehow.com,TRUE,,,,,FALSE,FALSE
+883,alfalfalfa.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+884,drom.ru,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+885,sapo.pt,FALSE,,,,,FALSE,FALSE
+886,as.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+887,yomiuri.co.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+888,macrumors.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+889,tsite.jp,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+890,ad4game.com,TRUE,,,,,FALSE,FALSE
+891,16lao.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+892,ruten.com.tw,FALSE,,,,,FALSE,FALSE
+893,indianexpress.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+894,quizlet.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+895,ew.com,FALSE,,,,,FALSE,FALSE
+896,tomshardware.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+897,ganji.com,FALSE,,,,,FALSE,FALSE
+898,gamepedia.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+899,shaparak.ir,TRUE,,,,,FALSE,FALSE
+900,gyazo.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+901,51.la,FALSE,,,,,FALSE,FALSE
+902,vine.co,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+903,eastmoney.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+904,thehindu.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+905,entrepreneur.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+906,trafficmonsoon.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+907,cisco.com,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+908,match.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+909,feng.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+910,yellowpages.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+911,monster.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+912,fitbit.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+913,haberturk.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+914,premierleague.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+915,google.lk,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+916,ebates.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+917,audible.com,FALSE,,,,,FALSE,FALSE
+918,roblox.com,TRUE,,,,,FALSE,FALSE
+919,friv.com,FALSE,,,,,FALSE,FALSE
+920,sex.com,FALSE,,,,,FALSE,FALSE
+921,intel.com,FALSE,,,,,FALSE,FALSE
+922,pagesjaunes.fr,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+923,2chblog.jp,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+924,usmagazine.com,TRUE,,,,,FALSE,FALSE
+925,sky.com,TRUE,,,,,FALSE,FALSE
+926,deezer.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+927,hdfilmifullizle.com.tr,TRUE,,,,,FALSE,FALSE
+928,basecamp.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+929,welt.de,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+930,ccm.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+931,abplive.in,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+932,idnes.cz,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+933,coupons.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+934,yandex.by,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+935,tagged.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+936,banggood.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+937,zone-telechargement.com,TRUE,,,,,FALSE,FALSE
+938,cpasbien.pw,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+939,globososo.com,TRUE,,,,,FALSE,FALSE
+940,google.rs,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+941,iflscience.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+942,carview.co.jp,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+943,zeroredirect1.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+944,ebay.ca,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+945,junbi-tracker.com,FALSE,,,,,FALSE,FALSE
+946,4pda.ru,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+947,masrawy.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+948,noaa.gov,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+949,etao.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+950,digg.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+951,whitepages.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+952,genius.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+953,chexun.com,FALSE,,,,,FALSE,FALSE
+954,trklnks.com,TRUE,TLSv1.1,RSA,4096,SHA256,FALSE,FALSE
+955,reimagenetwork.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+956,kotaku.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+957,lapatilla.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+958,okezone.com,FALSE,,,,,FALSE,FALSE
+959,prpops.com,TRUE,,,,,FALSE,FALSE
+960,cqnews.net,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+961,istartsurf.com,FALSE,,,,,FALSE,FALSE
+962,ultimate-guitar.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+963,adschemist.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+964,189.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+965,forever21.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+966,sankei.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+967,torcache.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+968,immobilienscout24.de,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+969,adme.ru,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+970,dafont.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+971,istockphoto.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+972,blogspot.fr,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+973,weather.gov,TRUE,,,,,FALSE,FALSE
+974,mynavi.jp,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+975,popupads.ir,TRUE,,,,,FALSE,FALSE
+976,soku.com,FALSE,,,,,FALSE,FALSE
+977,bt.com,TRUE,TLSv1.1,RSA,2048,SHA256,FALSE,FALSE
+978,rakuten.ne.jp,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+979,tutorialspoint.com,TRUE,,,,,FALSE,FALSE
+980,fanpage.gr,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+981,sponichi.co.jp,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+982,mapquest.com,FALSE,,,,,FALSE,FALSE
+983,tabnak.ir,TRUE,,,,,FALSE,FALSE
+984,pulseadnetwork.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+985,blogspot.de,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+986,prezi.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+987,wiley.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+988,pchome.com.tw,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+989,images-amazon.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+990,hilton.com,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+991,indiamart.com,FALSE,,,,,FALSE,FALSE
+992,google.by,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+993,mobilix.mobi,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+994,clickadu.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,FALSE
+995,tvguide.com,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+996,biobiochile.cl,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+997,sfr.fr,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+998,lun.com,FALSE,,,,,FALSE,FALSE
+999,harvard.edu,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+1000,breitbart.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41100,deutschland-spielt.de,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41101,check-domains.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41102,everafterhigh.com,TRUE,,,,,FALSE,FALSE
+41103,naturalsociety.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41104,soargames.com,TRUE,,,,,FALSE,FALSE
+41105,pepephone.com,TRUE,,,,,FALSE,FALSE
+41106,chinatennis.org.cn,FALSE,,,,,FALSE,FALSE
+41107,zeplin.io,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+41108,gainsy.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41109,genechy.com,TRUE,,,,,FALSE,FALSE
+41110,kob.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41111,webtrends.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41112,jrc.or.jp,FALSE,,,,,FALSE,FALSE
+41113,breakingisraelnews.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41114,teleguida.com,FALSE,,,,,FALSE,FALSE
+41115,mediatracking.us,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41116,torrentkittyzw.com,FALSE,,,,,FALSE,FALSE
+41117,save-on-crafts.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41118,amusingplanet.com,TRUE,,,,,FALSE,FALSE
+41119,ianshindi.com,TRUE,,,,,FALSE,FALSE
+41120,futurestreet.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41121,whocares.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41122,thebrick.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41123,picturetopeople.org,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41124,rixtube.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41125,deluge-torrent.org,TRUE,,,,,FALSE,FALSE
+41126,aveda.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41127,ins-saison.co.jp,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41128,boruto.com.br,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41129,ocj.com.cn,TRUE,,,,,FALSE,FALSE
+41130,gjart.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41131,hrpassport.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41132,mycandylove.com,TRUE,,,,,FALSE,FALSE
+41133,baidu.com.eg,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41134,astrostar.ru,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41135,zagopod.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41136,cardnet-tds.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41137,beastiegals.com,FALSE,,,,,FALSE,FALSE
+41138,jiae.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41139,mp3tadka.in,TRUE,,,,,FALSE,FALSE
+41140,moov.cc,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41141,listoffreeware.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41142,updraftplus.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41143,tophatter.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41144,iresearch.cn,FALSE,,,,,FALSE,FALSE
+41145,corriereadriatico.it,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41146,jellyneo.net,FALSE,,,,,FALSE,FALSE
+41147,elaosboa.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41148,ipon.hu,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41149,hashkiller.co.uk,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41150,irdiplomacy.ir,TRUE,,,,,FALSE,FALSE
+41151,richmond.edu,TRUE,,,,,FALSE,FALSE
+41152,missselfridge.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41153,webster.edu,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41154,epixeiro.gr,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41155,dispatchtimes.com,TRUE,,,,,FALSE,FALSE
+41156,kingsoopers.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41157,heavyobject.net,TRUE,,,,,FALSE,FALSE
+41158,biswokhabar.com,TRUE,,,,,FALSE,FALSE
+41159,htmlhelp.com,FALSE,,,,,FALSE,FALSE
+41160,modland.net,TRUE,,,,,FALSE,FALSE
+41161,bmc.com,FALSE,,,,,FALSE,FALSE
+41162,pingsitemap.com,TRUE,,,,,FALSE,FALSE
+41163,wowlavie.com,TRUE,,,,,FALSE,FALSE
+41164,20087.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41165,videoup.net,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41166,ocio.net,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41167,sonicwall.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41168,itsmycareer.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41169,adlabsimagica.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41170,autoscout24.pl,FALSE,,,,,FALSE,FALSE
+41171,ketqua.net,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41172,highonandroid.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41173,marianne.net,FALSE,,,,,FALSE,FALSE
+41174,orientacionandujar.es,FALSE,,,,,FALSE,FALSE
+41175,khaojing.com,TRUE,,,,,FALSE,FALSE
+41176,capitalnewyork.com,FALSE,,,,,FALSE,FALSE
+41177,pchouse.cn,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41178,vorc.us,TRUE,,,,,FALSE,FALSE
+41179,mcls.gov.ir,FALSE,,,,,FALSE,FALSE
+41180,kaznu.kz,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+41181,chukou1.cn,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41182,investintech.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41183,seeko.co.kr,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41184,diningcode.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41185,blazeweek.com,TRUE,,,,,FALSE,FALSE
+41186,seat.it,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41187,computeruniverse.ru,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41188,csgo-stats.com,FALSE,,,,,FALSE,FALSE
+41189,freetvall.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41190,ixquick-proxy.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+41191,yl234.com,FALSE,,,,,FALSE,FALSE
+41192,94.cm,TRUE,,,,,FALSE,FALSE
+41193,casimages.com,TRUE,,,,,FALSE,FALSE
+41194,photopin.com,FALSE,,,,,FALSE,FALSE
+41195,aprovecha.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41196,arcadeamazing.com,FALSE,,,,,FALSE,FALSE
+41197,cocoapods.org,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41198,elblogsalmon.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41199,picatown.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41200,popcomgames.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41201,latestnigeriannews.com,TRUE,,,,,FALSE,FALSE
+41202,provantage.com,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+41203,yunduan.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41204,tvshow.com.uy,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41205,lngs.gov.cn,TRUE,,,,,FALSE,FALSE
+41206,cornelsen.de,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41207,score.org,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41208,hqplrstore.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41209,sunfrogshirts.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41210,fox43.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41211,banque-accord.fr,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41212,forex.ee,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41213,justskins.com,FALSE,,,,,FALSE,FALSE
+41214,kottke.org,FALSE,,,,,FALSE,FALSE
+41215,federate365.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41216,growtraffic.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41217,bahn.com,TRUE,,,,,FALSE,FALSE
+41218,kinsta.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+41219,foodnetworkstore.com,FALSE,,,,,FALSE,FALSE
+41220,biztorrents.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41221,camgirls-videos.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41222,prodvigator.ru,FALSE,,,,,FALSE,FALSE
+41223,aeolservice.es,TRUE,,,,,FALSE,FALSE
+41224,genealogie.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41225,boxtv.com,TRUE,TLSv1.2,RSA,4096,SHA256,TRUE,TRUE
+41226,topmaxtech.net,TRUE,,,,,FALSE,FALSE
+41227,minmote.no,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41228,it007.com,FALSE,,,,,FALSE,FALSE
+41229,yakaz.com,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+41230,egone.org,TRUE,,,,,FALSE,FALSE
+41231,amuse-c.jp,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41232,biznes-prost.ru,FALSE,,,,,FALSE,FALSE
+41233,wptv.com,FALSE,,,,,FALSE,FALSE
+41234,babymetal-darake.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41235,assurant.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41236,aviation-arab.net,TRUE,,,,,FALSE,FALSE
+41237,myhpgas.in,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41238,jisutiyu.com,FALSE,,,,,FALSE,FALSE
+41239,megadrupal.com,TRUE,,,,,FALSE,FALSE
+41240,kurs.com,TRUE,,,,,FALSE,FALSE
+41241,love58.com.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41242,jeep4x4center.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41243,imikimi.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41244,heroesnexus.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41245,ecesummit.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41246,wowgirls.com,FALSE,,,,,FALSE,FALSE
+41247,azteca7.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41248,bigtex.com,TRUE,,,,,FALSE,FALSE
+41249,hyiphome.net,TRUE,,,,,FALSE,FALSE
+41250,kaft.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41251,info-listings.com,TRUE,,,,,FALSE,FALSE
+41252,huawei.ru,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41253,educationconnection.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41254,soundstrue.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41255,masmp3s.com,TRUE,,,,,FALSE,FALSE
+41256,totallytarget.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41257,lump.co,FALSE,,,,,FALSE,FALSE
+41258,18tube.xxx,FALSE,,,,,FALSE,FALSE
+41259,referenceforbusiness.com,FALSE,,,,,FALSE,FALSE
+41260,satoshicountry.org,TRUE,,,,,FALSE,FALSE
+41261,fimosw.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41262,brightlocal.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41263,ashleystewart.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41264,verypsp.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41265,magicjoke.com,FALSE,,,,,FALSE,FALSE
+41266,2255.net,FALSE,,,,,FALSE,FALSE
+41267,lh.or.kr,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+41268,healthbackbone.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41269,sonetel.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41270,calcxml.com,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+41271,minedu.gov.gr,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41272,syncer.jp,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41273,bonpatron.com,FALSE,,,,,FALSE,FALSE
+41274,ncl.edu.tw,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41275,bildkontakte.de,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41276,darklegacycomics.com,FALSE,,,,,FALSE,FALSE
+41277,basketbuild.com,TRUE,,,,,FALSE,FALSE
+41278,gostodisso.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41279,fumanhua.net,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41280,napaprolink.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41281,vpweb.com,FALSE,,,,,FALSE,FALSE
+41282,parseapp.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41283,meteo-paris.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41284,e-dbd.org,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41285,66w.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41286,udsm.ac.tz,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41287,disneylandparis.fr,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41288,onhandrecipes.com,FALSE,,,,,FALSE,FALSE
+41289,tykd.com,FALSE,,,,,FALSE,FALSE
+41290,seventhavenue.com,TRUE,,,,,FALSE,FALSE
+41291,congly.com.vn,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41292,vistaprint.es,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41293,football-russia.tv,TRUE,,,,,FALSE,FALSE
+41294,gpsies.com,TRUE,,,,,FALSE,FALSE
+41295,emsc-csem.org,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41296,wm-seo.ru,TRUE,,,,,FALSE,FALSE
+41297,bang.co.jp,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41298,bukade.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41299,eghtesadnews.com,FALSE,,,,,FALSE,FALSE
+41300,jmnoticia.com.br,FALSE,,,,,FALSE,FALSE
+41301,deanza.edu,TRUE,,,,,FALSE,FALSE
+41302,apptool.jp,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41303,wfmz.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41304,brandsmartusa.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41305,adtpulse.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41306,calendrier-365.fr,TRUE,,,,,FALSE,FALSE
+41307,mangasproject.net.br,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41308,utest.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41309,doramakun.ru,TRUE,,,,,FALSE,FALSE
+41310,etrain.info,FALSE,,,,,FALSE,FALSE
+41311,verajohn.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41312,voi-noi.gr,TRUE,,,,,FALSE,FALSE
+41313,manipalprolearn.com,FALSE,,,,,FALSE,FALSE
+41314,topseos.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41315,jav365.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41316,yundasys.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41317,iranianasnaf.ir,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41318,tianxun.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41319,foroparalelo.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41320,sportando.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41321,philpapers.org,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41322,sovserv.ru,FALSE,,,,,FALSE,FALSE
+41323,iran-newspaper.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41324,ff14angler.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41325,ddl-island.su,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41326,copytaste.com,FALSE,,,,,FALSE,FALSE
+41327,bonertube.com,FALSE,,,,,FALSE,FALSE
+41328,empregandobrasil.com.br,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41329,ups.com.tr,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41330,brettrutecky.com,TRUE,,,,,FALSE,FALSE
+41331,wnacg.com,FALSE,,,,,FALSE,FALSE
+41332,cod.edu,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41333,cbec.gov.in,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41334,duduwo.com,FALSE,,,,,FALSE,FALSE
+41335,superplayer.fm,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41336,nutrition-and-you.com,FALSE,,,,,FALSE,FALSE
+41337,convert-me.com,FALSE,,,,,FALSE,FALSE
+41338,tantannews.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41339,calgarysun.com,FALSE,,,,,FALSE,FALSE
+41340,bang-olufsen.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41341,merinews.com,FALSE,,,,,FALSE,FALSE
+41342,peps.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41343,holyseal.net,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41344,raksul.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41345,flamingtext.in,TRUE,,,,,FALSE,FALSE
+41346,smsfrombrowser.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41347,vidstatsx.com,TRUE,,,,,FALSE,FALSE
+41348,bobobf.com,FALSE,,,,,FALSE,FALSE
+41349,anweshanam.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41350,judou123.cn,FALSE,,,,,FALSE,FALSE
+41351,bloxcms.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41352,ldschurch.org,FALSE,,,,,FALSE,FALSE
+41353,adbeat.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41354,sexdo.com,FALSE,,,,,FALSE,FALSE
+41355,qluu.com,FALSE,,,,,FALSE,FALSE
+41356,projecteuler.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41357,bescore.com,TRUE,,,,,FALSE,FALSE
+41358,karnataka.gov.in,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41359,bawi.org,FALSE,,,,,FALSE,FALSE
+41360,veryzhun.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41361,cato.org,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41362,underscorejs.org,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41363,zte.com.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41364,yu.edu,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41365,ybdu.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41366,joomir.com,TRUE,,,,,FALSE,FALSE
+41367,tz110.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41368,chehang168.com,FALSE,,,,,FALSE,FALSE
+41369,rudn.ru,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41370,officialsearch.com,FALSE,,,,,FALSE,FALSE
+41371,looker.com,TRUE,,,,,FALSE,FALSE
+41372,xiangmu.com,FALSE,,,,,FALSE,FALSE
+41373,livebasketball.tv,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+41374,m7flashgames.com,TRUE,,,,,FALSE,FALSE
+41375,stocklogos.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41376,behrah.com,TRUE,,,,,FALSE,FALSE
+41377,ichunt.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41378,brighthubeducation.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41379,oscaro.es,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41380,theshoppinggeek.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41381,spokesman.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41382,panorama-auto.it,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41383,takimag.com,FALSE,,,,,FALSE,FALSE
+41384,arcadewow.com,FALSE,,,,,FALSE,FALSE
+41385,muumuu-domain.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41386,helios.pl,FALSE,,,,,FALSE,FALSE
+41387,tvchosun.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41388,breadsearch.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41389,pardisgame.net,FALSE,,,,,FALSE,FALSE
+41390,gene.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41391,fireeye.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41392,websaman.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41393,gandalfporn.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41394,impressionen.de,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41395,pplock.com,FALSE,,,,,FALSE,FALSE
+41396,gamingtechie.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41397,jingyanbus.com,TRUE,,,,,FALSE,FALSE
+41398,gavros.gr,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41399,refworks.com,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+41400,thewritelife.com,TRUE,,,,,FALSE,FALSE
+41401,yourfuturefood.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41402,armytimes.com,FALSE,,,,,FALSE,FALSE
+41403,freekaoyan.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41404,4downloads.ir,TRUE,,,,,FALSE,FALSE
+41405,nice.org.uk,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41406,naijaporntube.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41407,sexemodel.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41408,teron.ru,FALSE,,,,,FALSE,FALSE
+41409,skymiga.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41410,wonderzine.com,FALSE,,,,,FALSE,FALSE
+41411,inter.edu,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41412,lautoentrepreneur.fr,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41413,alshop.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41414,lapsi.al,FALSE,,,,,FALSE,FALSE
+41415,xxxpornporn.com,FALSE,,,,,FALSE,FALSE
+41416,btn2go.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41417,mtfj.net,TRUE,,,,,FALSE,FALSE
+41418,blitzgamer.com,TRUE,,,,,FALSE,FALSE
+41419,freetetris.org,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41420,ibisworld.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41421,itembridge.com,TRUE,,,,,FALSE,FALSE
+41422,nnmuz.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41423,sport.net,FALSE,,,,,FALSE,FALSE
+41424,dietdoctor.com,TRUE,,,,,FALSE,FALSE
+41425,supplyhouse.com,TRUE,,,,,FALSE,FALSE
+41426,xmoviles.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41427,bcit.ca,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41428,ppompu.co.kr,FALSE,,,,,FALSE,FALSE
+41429,top1porn.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41430,heartiste.wordpress.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41431,rockport.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41432,ebanx.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41433,bengali-mp3.com,FALSE,,,,,FALSE,FALSE
+41434,musculardevelopment.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41435,findtheneedle.co.uk,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41436,biggboss9contestants.in,TRUE,,,,,FALSE,FALSE
+41437,excellentbux.net,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41438,sumanasa.com,FALSE,,,,,FALSE,FALSE
+41439,miarroba.es,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41440,landmarkit.in,TRUE,,,,,FALSE,FALSE
+41441,lm.pl,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41442,sarenza.pl,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41443,twenga.pl,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41444,ocweekly.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41445,towerthemes.com,TRUE,,,,,FALSE,FALSE
+41446,doleta.gov,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41447,daxon.fr,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41448,xtremewrestlingtorrents.net,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41449,logic-immo.be,FALSE,,,,,FALSE,FALSE
+41450,giftsnflower.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41451,antyradio.pl,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41452,wook.pt,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41453,wodexiangce.cn,TRUE,,,,,FALSE,FALSE
+41454,mynoise.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41455,magyarorszag.hu,TRUE,,,,,FALSE,FALSE
+41456,wpblog.jp,TRUE,,,,,FALSE,FALSE
+41457,mnwww.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41458,rutaxi.ru,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41459,178hui.com,FALSE,,,,,FALSE,FALSE
+41460,igre123.net,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41461,myfilestore.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41462,bcb777.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41463,yamanashi.jp,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41464,fingerstylechina.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41465,atriumtech.com,FALSE,,,,,FALSE,FALSE
+41466,bauhaus.se,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41467,fooq.info,FALSE,,,,,FALSE,FALSE
+41468,yonyou.com,FALSE,,,,,FALSE,FALSE
+41469,wsj.net,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41470,cartoonnetwork.com.br,TRUE,,,,,FALSE,FALSE
+41471,boombate.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41472,tnwcdn.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41473,zhyjw.com,TRUE,,,,,FALSE,FALSE
+41474,omanko-adaruto.com,FALSE,,,,,FALSE,FALSE
+41475,microminimus.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41476,westernunion.co.uk,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41477,sanskritimagazine.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41478,boliga.dk,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41479,buzzave.com,FALSE,,,,,FALSE,FALSE
+41480,a101.com.tr,FALSE,,,,,FALSE,FALSE
+41481,93tvb.net,FALSE,,,,,FALSE,FALSE
+41482,ahangbaz.org,TRUE,,,,,FALSE,FALSE
+41483,defensivecarry.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41484,admixer.net,FALSE,,,,,FALSE,FALSE
+41485,228.com.cn,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41486,apu.edu,TRUE,,,,,FALSE,FALSE
+41487,stats.gov.cn,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41488,cays.info,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41489,skyslope.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41490,easyfoodplans.com,FALSE,,,,,FALSE,FALSE
+41491,baoshu8.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41492,newstvforum.com,TRUE,,,,,FALSE,FALSE
+41493,affiliates.com.tw,FALSE,,,,,FALSE,FALSE
+41494,golocal.de,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+41495,64365.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41496,topmba.com,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41497,memurhaber.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41498,qqbifen.com,FALSE,,,,,FALSE,FALSE
+41499,planbookedu.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41500,batuta.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41501,ty42.com,FALSE,,,,,FALSE,FALSE
+41502,dineromail.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41503,dollaruz.com,TRUE,,,,,FALSE,FALSE
+41504,lgmtdj.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41505,killerstartups.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41506,sandvik.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41507,animop.com,TRUE,,,,,FALSE,FALSE
+41508,xiankan.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41509,teluguflame.net,TRUE,,,,,FALSE,FALSE
+41510,al-madina.com,TRUE,,,,,FALSE,FALSE
+41511,infakt.pl,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41512,belboon.de,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41513,deepwebtr.net,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41514,whats.be,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41515,koding.com,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41516,typography.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41517,elseptimoarte.net,TRUE,,,,,FALSE,FALSE
+41518,allshops.ro,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41519,ikmultimedia.com,TRUE,TLSv1.2,RSA,2048,SHA1,FALSE,FALSE
+41520,epson.co.uk,TRUE,,,,,FALSE,FALSE
+41521,acads.net,FALSE,,,,,FALSE,FALSE
+41522,file-upload.net,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41523,a9.com,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41524,coursesu.com,FALSE,,,,,FALSE,FALSE
+41525,2tgroup.info,TRUE,TLSv1.2,RSA,4096,SHA256,FALSE,FALSE
+41526,conseilsmarketing.com,TRUE,,,,,FALSE,FALSE
+41527,fuzoku.jp,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41528,avenida.com.ar,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41529,unetepubli.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41530,audi.co.jp,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41531,dolphin-emu.org,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41532,jimmybeanswool.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41533,centralclubs.com,TRUE,,,,,FALSE,FALSE
+41534,abhi2you.com,TRUE,,,,,FALSE,FALSE
+41535,softantenna.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41536,hdbits.org,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+41537,germanptc.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41538,rollingstone.uol.com.br,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41539,mywconline.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41540,junona.org,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41541,otherside.gr,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41542,vinden.be,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE
+41543,facdn.net,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41544,thanhlapctyviet.com,TRUE,,,,,FALSE,FALSE
+41545,tweepsmap.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41546,newstown.co.kr,TRUE,,,,,FALSE,FALSE
+41547,ondvdreleases.com,TRUE,,,,,FALSE,FALSE
+41548,eltrece.mx,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41549,zuqiuba.cc,FALSE,,,,,FALSE,FALSE
+41550,secrant.com,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41551,bcia.com.cn,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41552,app.net,TRUE,TLSv1.2,RSA,2048,SHA256,TRUE,TRUE
+41553,trip8080.com,TRUE,TLSv1,RSA,2048,SHA1,FALSE,FALSE
+41554,cmctracker.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41555,artsonia.com,TRUE,TLSv1.1,RSA,2048,SHA1,FALSE,FALSE
+41556,japancar.ru,connection error,connection error,connection error,connection error,connection error,connection error,connection error
+41557,webspread.com.cn,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code,404 response code
+41558,directlinkeservices.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41559,eastyule.com,TRUE,TLSv1.2,RSA,2048,SHA256,FALSE,FALSE
+41560,unknowncheats.me,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41561,ula.cc,TRUE,TLSv1.2,EC,256,SHA256,FALSE,FALSE
+41562,monmusu.tv,TRUE,TLSv1,RSA,2048,SHA256,FALSE,FALSE

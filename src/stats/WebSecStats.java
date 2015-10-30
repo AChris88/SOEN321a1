@@ -18,7 +18,6 @@ import java.security.cert.Certificate;
 import java.security.cert.X509Certificate;
 import java.util.List;
 import java.util.Map;
-
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
@@ -30,7 +29,7 @@ import javax.net.ssl.SSLSocketFactory;
  * @author Christian Allard 27026188
  * 
  * @created 15/10/2015
- * @edited 16/10/2015
+ * @edited 30/10/2015
  *
  */
 
@@ -39,17 +38,27 @@ public class WebSecStats {
 	public static void main(String[] args) {
 		// Top million site listing
 		String path = "Oct_13_2015_top-1m.csv";
-
+		
 		// Pulls the listing and analyzes all sites in the accepted range.
-		analyzeSiteListing(path, getStartIndex(27026188),
-				getStartIndex(27077076));
-
+		int startRange = getStartIndex(27026188);
+		int endRange = getStartIndex(27077076);
+		
+//		analyzeSiteListing(path, startRange, endRange);
+		
 		/* TESTING */
-//		 analyzeSite(1, "wikipedia.org");
-//		 System.out.println("HTTPHeader:\n" +
-//		 getHTTPHeader("https://facebook.com"));
+//		System.out.println("Start: " + startRange + ", End: " + endRange);
+//		analyzeSite(1, "facebook.com");
+//		System.out.println("HTTPHeader:\n" + getHTTPHeader("https://facebook.com"));
 	}
 
+	/**
+	 * Utility method used to obtain the number of the starting record of a 10,000 block
+	 * of domains to analyze. 
+	 * 
+	 * @param studentId used to generate an integer which indicates the record number
+	 * 					which is the start of a 10,000 domain block to analyze. 
+	 * @return integer value which indicates the start of the range of domains to analyze.
+	 */
 	private static int getStartIndex(int studentId) {
 		MessageDigest md = null;
 
@@ -88,7 +97,7 @@ public class WebSecStats {
 
 		// Instantiating variables used to store retrieved data
 		String protocol = "";
-		String host = domain;
+		String host = "";
 		String keyType = "";
 		String keySize = "";
 		String algorithm = "";
@@ -96,7 +105,8 @@ public class WebSecStats {
 		String sigAlgo = "";
 		String httpHeader = "";
 		String httpTmp = "";
-
+		String flag = "";
+		
 		// Instantiating booleans used to verify connection states
 		boolean isHTTPS = true;
 		boolean isHSTS = false;
@@ -114,45 +124,67 @@ public class WebSecStats {
 			socket = factory.createSocket(domain, 443);
 			// Get handle to the session object from the socket connection
 			session = ((SSLSocket) socket).getSession();
-
-			// If the session is not null, begin extracting socket connection
-			// information
+			
+			// If the session is not null, begin extracting socket connection information
 			if (session != null) {
+				
+				// Retrieve HTTP header from the domain
+				httpHeader = getHTTPHeader("https://"+domain);
 
-				httpHeader = getHTTPHeader("https://" + domain);
+				// Determines if the domain enforces HSTS
+				if(httpHeader.contains("Strict-Transport-Security")){
+					// Extracting HSTS parameters
+					httpTmp = httpHeader.substring(httpHeader.indexOf("Strict-Transport-Security"));
 
-				if (httpHeader.contains("Strict-Transport-Security")) {
-					httpTmp = httpHeader.substring(httpHeader
-							.indexOf("Strict-Transport-Security"));
+					// Establishing HSTS as being supported
 					isHSTS = true;
-					String flag = "max-age=";
-					if (httpTmp.contains(flag)) {
+					
+					// Assigning flag to find duration of HSTS
+					flag = "max-age=";
+					
+					// Determines the max-age of HSTS
+					if (httpTmp.contains(flag)){
+						
+						// Getting a handle to HSTS configuration list, where max-age value is the first value
 						httpTmp = httpTmp.substring(httpTmp.indexOf(flag) + flag.length(), httpTmp.indexOf(']'));
-						if(httpTmp.contains(";"))
+						
+						// If there are multiple configuration values, extract only the HSTS max-age
+						if(httpTmp.contains(";")) {
 							httpTmp = httpTmp.substring(0, httpTmp.indexOf(';'));
+						}
+						
+						// Parse max-age value to be numerically compared
 						long maxAge = Long.parseLong(httpTmp);
-						if (maxAge >= 2592000) {
+						
+						// If HSTS max-age is greater than a month, then HSTSLong is true
+						if(maxAge >= 2592000) {
 							isHSTSLong = true;
 						}
 					}
 				}
-
+				
+				
+				/*
+				 * session.getCertificates() occasionally throws
+				 * "javax.net.ssl.SSLPeerUnverifiedException" exception
+				 * which, according to Google, seems to be caused by out-dated certificates
+				 */
+				// Getting a handle to the first certificate provided by the domain 
 				certificates = session.getPeerCertificates();
 				X509Certificate certificate = (X509Certificate) certificates[0];
-
-//				System.out.println(certificate);
 				
+				// Getting the public key and signature algorithm from the certificate
 				pubKey = certificate.getPublicKey().toString();
 				sigAlgo = certificate.getSigAlgName();
 
+				// Extracting the specific algorithm name
 				algorithm = sigAlgo.substring(0, sigAlgo.indexOf("with"));
 				
-				keyType = pubKey.substring(pubKey.indexOf(' ') + 1,
-						pubKey.indexOf(" public"));
-				keySize = pubKey.substring(pubKey.indexOf(',') + 2,
-						pubKey.indexOf(" bits"));
-
-				// Identify host, protocol, and cipher suite
+				// Extracting the exact key type and size
+				keyType = pubKey.substring(pubKey.indexOf(' ') + 1, pubKey.indexOf(" public"));
+				keySize = pubKey.substring(pubKey.indexOf(',') + 2, pubKey.indexOf(" bits"));
+				
+				// Identifying the host and protocol
 				host = session.getPeerHost();
 				protocol = session.getProtocol();
 			}
@@ -161,9 +193,10 @@ public class WebSecStats {
 			hostFound = false;
 		} catch (ConnectException e) {
 			if (e.getMessage().contains("Connection refused")) {
-				// cannot connect due to set protocols only accepting SSL/TLS
+				// Cannot connect due to set protocols only accepting SSL/TLS
 				isHTTPS = false;
 			} else {
+				// Other connection error occurred
 				connectionError = true;
 			}
 		} catch (Exception e) {
@@ -172,13 +205,18 @@ public class WebSecStats {
 		} finally {
 			// Creating the comma-delimited analysis report
 			String errorMessage = "";
+			
 			if (connectionError) {
 				// A connection error occurred
 				errorMessage = "connection error";
 			} else if (!hostFound) {
 				// The requested domain was not found
 				errorMessage = "404 response code";
-			} else if (!errorMessage.equals("")) {
+			} 
+			
+			// If host is not found or there was a connection error,
+			// display the error message in the domain analysis
+			if (!hostFound || connectionError) {
 				analysis = rank + "," + host + "," + errorMessage + ","
 						+ errorMessage + "," + errorMessage + ","
 						+ errorMessage + "," + errorMessage + ","
@@ -189,10 +227,11 @@ public class WebSecStats {
 						+ "," + keyType + "," + keySize + "," + algorithm + ","
 						+ isHSTS + "," + isHSTSLong + "\n";
 			}
+			
 			// Send analysis off to be written to a CSV file
 			recordAnalysis(analysis);
-
-			// Try to close the socket connection if it is not null
+			
+			// Close the socket connection if it is not null
 			if (socket != null)
 				try {
 					socket.close();
@@ -232,10 +271,10 @@ public class WebSecStats {
 		String url = "";
 
 		try {
-			// Create new file reader using the path of the CSV file
+			// Create new file reader usng the path of the CSV file
 			fr = new FileReader(path);
-			// Create new buffered reader using the file reader that was just
-			// created
+			
+			// Create new buffered reader using the file reader that was just created
 			br = new BufferedReader(fr);
 
 			// As long as the file has more lines, assign them to the line
@@ -246,8 +285,8 @@ public class WebSecStats {
 						line.indexOf(',')));
 				// Get the website domain to analyze
 				url = line.substring(line.indexOf(',') + 1);
-				// If the record number falls within the accepted ranges, then
-				// the website it analyzed.
+				// If the record number falls within the accepted ranges,
+				// then the website it analyzed.
 				if (recordNum <= 1000
 						|| (recordNum >= startRange1 && recordNum < endRange1)
 						|| (recordNum >= startRange2 && recordNum < endRange2)) {
@@ -261,7 +300,7 @@ public class WebSecStats {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			// Try and close the buffered reader if it is not null
+			// Close the buffered reader
 			if (br != null){
 				try {
 					br.close();
@@ -272,21 +311,35 @@ public class WebSecStats {
 		}
 	}
 
+	/**
+	 * Utility method used to obtain the HTTP header from the specified domain
+	 * 
+	 * @param domain for which to retrieve the HTTP header.
+	 * @return String representation of the domain's HTTP header.
+	 */
 	private static String getHTTPHeader(String domain) {
+		//Instantiate variables needed for processing of HTTP header
 		URL url = null;
 		URLConnection con = null;
 		Map<String, List<String>> header = null;
 		StringBuilder str = new StringBuilder();
 		try {
+			//Open connection to the domain
 			url = new URL(domain);
 			con = url.openConnection();
+			
+			//Retrieve connection HTTP header
 			header = con.getHeaderFields();
+			
+			//Extract all header <key, value> pairs and append them to the StringBuilder
 			for (Map.Entry<String, List<String>> entry : header.entrySet()) {
 				str.append(entry.getKey() + " : " + entry.getValue() + "\n");
 			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		//Return the formatted HTTP header String 
 		return str.toString();
 	}
 
@@ -298,6 +351,7 @@ public class WebSecStats {
 	 */
 	private static void recordAnalysis(String analysis) {
 		try {
+			//Appends the analysis as an array of Bytes to the analysis.csv file
 			Files.write(Paths.get("analysis.csv"), analysis.getBytes(),
 					StandardOpenOption.APPEND);
 		} catch (IOException e) {
