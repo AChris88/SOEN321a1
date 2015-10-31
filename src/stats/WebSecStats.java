@@ -35,6 +35,34 @@ import javax.net.ssl.SSLSocketFactory;
 
 public class WebSecStats {
 
+	// Instantiating variables required for socket connections
+	private static SSLSocketFactory factory = null;
+	private static Socket socket = null;
+	private static SSLSession session = null;
+	private static Certificate[] certificates = null;
+
+	// Instantiating variables used to store retrieved data
+	private static String protocol = "";
+	private static String host = "";
+	private static String keyType = "";
+	private static String keySize = "";
+	private static String algorithm = "";
+	private static String pubKey = "";
+	private static String sigAlgo = "";
+	private static String httpHeader = "";
+	private static String httpTmp = "";
+	private static String flag = "";
+	private static String analysis = "";
+
+	// Instantiating booleans used to verify connection states
+	private static boolean isHTTPS = true;
+	private static boolean isHSTS = false;
+	private static boolean isHSTSLong = false;
+	private static boolean hostFound = true;
+	private static boolean connectionError = false;
+
+
+	
 	public static void main(String[] args) {
 		// Top million site listing
 		String path = "Oct_13_2015_top-1m.csv";
@@ -43,7 +71,7 @@ public class WebSecStats {
 		int startRange = getStartIndex(27026188);
 		int endRange = getStartIndex(27077076);
 		
-//		analyzeSiteListing(path, startRange, endRange);
+		analyzeSiteListing(path, startRange, endRange);
 		
 		/* TESTING */
 //		System.out.println("Start: " + startRange + ", End: " + endRange);
@@ -86,36 +114,13 @@ public class WebSecStats {
 	 *            is the website to be analyzed
 	 */
 	private static void analyzeSite(int rank, String domain) {
-		// Setting accepted connection protocols
-//		System.setProperty("https.protocols", "SSLv3,TLSv1,TLSv1.1,TLSv1.2");
-
-		// Instantiating variables required for socket connections
-		SSLSocketFactory factory = null;
-		Socket socket = null;
-		SSLSession session = null;
-		Certificate[] certificates = null;
-
-		// Instantiating variables used to store retrieved data
-		String protocol = "";
-		String host = "";
-		String keyType = "";
-		String keySize = "";
-		String algorithm = "";
-		String pubKey = "";
-		String sigAlgo = "";
-		String httpHeader = "";
-		String httpTmp = "";
-		String flag = "";
 		
-		// Instantiating booleans used to verify connection states
-		boolean isHTTPS = true;
-		boolean isHSTS = false;
-		boolean isHSTSLong = false;
-		boolean hostFound = true;
-		boolean connectionError = false;
-
-		// Variable to contain final site analysis
-		String analysis = "";
+		// Setting booleans used to verify connection states
+		isHTTPS = true;
+		isHSTS = false;
+		isHSTSLong = false;
+		hostFound = true;
+		connectionError = false;
 
 		try {
 			// Get instance of an SSLSocketFactory
